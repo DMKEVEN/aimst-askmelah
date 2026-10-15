@@ -16,7 +16,7 @@ exports.handler = async function (event) {
 
   const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) {
-    return { statusCode: 500, headers, body: JSON.stringify({ error: "GEMINI_API_KEY is missing." }) };
+    return { statusCode: 500, headers, body: JSON.stringify({ error: "GEMINI_API_KEY environment variable is missing on Netlify." }) };
   }
 
   try {
@@ -27,8 +27,7 @@ exports.handler = async function (event) {
       return { statusCode: 400, headers, body: JSON.stringify({ error: "Prompt is required." }) };
     }
 
-    // Using stable v1 API endpoint
-    const apiUrl = `https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
+    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
 
     const response = await fetch(apiUrl, {
       method: "POST",
