@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIMST AskMeLah! - Student AI Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="chat-wrapper">
+        <!-- Header Section -->
+        <header class="chat-header">
+            <div class="brand">
+                <div class="logo-circle">
+                    <i class="fa-solid fa-robot"></i>
+                </div>
+                <div class="brand-text">
+                    <h1>AIMST AskMeLah!</h1>
+                    <p>Official AIMST Knowledge Base & Guidance Assistant</p>
+                </div>
+            </div>
+            <span class="status-badge"><i class="fa-solid fa-circle"></i> Online</span>
+        </header>
+
+        <!-- Quick Access Buttons Bar -->
+        <div class="quick-links-bar">
+            <a href="https://portal.aimst.edu.my/" target="_blank" class="chip"><i class="fa-solid fa-user-graduate"></i> Student Portal</a>
+            <a href="https://aimst.edu.my/staff_/0/" target="_blank" class="chip"><i class="fa-solid fa-gauge"></i> Staff Dashboard</a>
+            <a href="https://aimst.edu.my/wp-content/uploads/2019/04/Undergraduate-Student-Handbook8thEdition.pdf" target="_blank" class="chip"><i class="fa-solid fa-book"></i> Handbook</a>
+            <a href="https://aimst.edu.my/virtualtour/index.htm" target="_blank" class="chip"><i class="fa-solid fa-vr-cardboard"></i> 360° Tour</a>
+            <a href="https://register.aimst.edu.my/" target="_blank" class="chip"><i class="fa-solid fa-file-pen"></i> Apply Online</a>
+        </div>
+
+        <!-- Main Chat Stream -->
+        <main id="chat-container" class="chat-container">
+            <div class="message bot-message">
+                Hello! I am <strong>AIMST AskMeLah!</strong>, your assistant for AIMST University rules, fees, contacts, campus facilities, and academic requirements. How can I help you today?
+            </div>
+        </main>
+
+        <!-- Input Bar Section -->
+        <footer class="chat-footer">
+            <div class="input-box">
+                <input type="text" id="user-input" placeholder="Ask about CGPA, CIMB account, temple, hostel rules..." autocomplete="off">
+                <button id="send-btn" aria-label="Send Message"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

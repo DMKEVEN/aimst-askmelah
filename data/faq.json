@@ -1,0 +1,456 @@
+{
+  "version": "1.0.0",
+  "last_updated": "2026-10-13",
+  "university": "AIMST University",
+  "code": "DU010(K)",
+  "faqs": [
+    {
+      "id": "faq_gov_001",
+      "category": "governance",
+      "keywords": ["chancellor", "head of university", "vigneswaran", "who is chancellor"],
+      "question": "Who is the Chancellor of AIMST University?",
+      "answer": "The current Chancellor of AIMST University is YBhg. Tan Sri Dato' Seri Utama Dr. S.A. Vigneswaran, who also serves as Chairman of the Board of Directors, President of MIC, and Chairman of MIED."
+    },
+    {
+      "id": "faq_gov_002",
+      "category": "governance",
+      "keywords": ["founding chancellor", "samy vellu", "first chancellor"],
+      "question": "Who was the founding Chancellor of AIMST University?",
+      "answer": "The founding Chancellor of AIMST University was the late Tun Dato' Seri Utama Dr. S. Samy Vellu."
+    },
+    {
+      "id": "faq_gov_003",
+      "category": "governance",
+      "keywords": ["vice chancellor", "vc", "kathiresan", "who is vice chancellor"],
+      "question": "Who is the Vice-Chancellor of AIMST University?",
+      "answer": "The Vice-Chancellor of AIMST University is Prof. Dr. S. Kathiresan."
+    },
+    {
+      "id": "faq_gov_004",
+      "category": "governance",
+      "keywords": ["address", "location", "where is aimst", "address of aimst", "map"],
+      "question": "What is the official address of AIMST University?",
+      "answer": "AIMST University, DU010(K), Batu 3 1/2, Bukit Air Nasi, Jalan Bedong—Semeling, 08100 Bedong, Kedah Darul Aman, Malaysia."
+    },
+    {
+      "id": "faq_gov_005",
+      "category": "governance",
+      "keywords": ["chancellery contact", "contact chancellor", "vc email"],
+      "question": "How do I contact the Chancellery Office?",
+      "answer": "You can reach the Chancellery Office via email at chancellery@aimst.edu.my or vc@aimst.edu.my, or via the general campus line at +604-429 8000."
+    },
+    {
+      "id": "faq_links_001",
+      "category": "portal_links",
+      "keywords": ["student portal", "portal link", "login student portal"],
+      "question": "What is the URL for the AIMST Student Portal?",
+      "answer": "You can access the AIMST Student Portal directly at https://portal.aimst.edu.my/"
+    },
+    {
+      "id": "faq_links_002",
+      "category": "portal_links",
+      "keywords": ["staff portal", "hr portal", "dashboard link", "staff dashboard"],
+      "question": "Where is the AIMST Staff Dashboard / HR Portal?",
+      "answer": "The AIMST Staff Dashboard and HR Portal can be accessed at https://aimst.edu.my/staff_/0/"
+    },
+    {
+      "id": "faq_links_003",
+      "category": "portal_links",
+      "keywords": ["handbook", "student handbook", "pdf handbook", "rulesbook"],
+      "question": "Where can I download the AIMST Student Handbook?",
+      "answer": "The official Undergraduate Student Handbook (8th Edition) is available at https://aimst.edu.my/wp-content/uploads/2019/04/Undergraduate-Student-Handbook8thEdition.pdf"
+    },
+    {
+      "id": "faq_links_004",
+      "category": "portal_links",
+      "keywords": ["virtual tour", "360 tour", "campus tour", "map tour"],
+      "question": "Is there a 360 virtual tour of AIMST campus?",
+      "answer": "Yes, you can take a 360-degree virtual tour of the AIMST campus at https://aimst.edu.my/virtualtour/index.htm"
+    },
+    {
+      "id": "faq_links_005",
+      "category": "portal_links",
+      "keywords": ["online apply", "register online", "apply portal", "application link"],
+      "question": "Where do I apply online for AIMST courses?",
+      "answer": "You can register and submit applications through the official portal at https://register.aimst.edu.my/"
+    },
+    {
+      "id": "faq_links_006",
+      "category": "portal_links",
+      "keywords": ["library portal", "e-library", "online library"],
+      "question": "What is the web link for the AIMST Library Portal?",
+      "answer": "Access the AIMST Central Library Portal at http://portallibrary.aimst.edu.my/"
+    },
+    {
+      "id": "faq_acad_001",
+      "category": "academic_rules",
+      "keywords": ["attendance", "80%", "attendance requirement", "barring", "grade br"],
+      "question": "What is the attendance policy at AIMST University?",
+      "answer": "Students must maintain a minimum of 80% physical attendance per course. Falling below 80% without approved leave results in Grade BR (Barred from final exams). Continuous unexcused absence exceeding 2 weeks may lead to administrative termination."
+    },
+    {
+      "id": "faq_acad_002",
+      "category": "academic_rules",
+      "keywords": ["first class honour", "first class cgpa", "cgpa threshold", "distinction"],
+      "question": "What CGPA is required to get First Class Honours at AIMST?",
+      "answer": "To graduate with First Class Honours, a student must achieve a cumulative CGPA of 3.67 or higher (CGPA >= 3.67) upon completion of their degree program, with no active module failures."
+    },
+    {
+      "id": "faq_acad_003",
+      "category": "academic_rules",
+      "keywords": ["probation", "fail cgpa", "academic warning"],
+      "question": "What happens if a student's CGPA drops below 2.00?",
+      "answer": "A student whose CGPA drops below 2.00 will be placed on Academic Probation and assigned to an academic mentor for close progress monitoring."
+    }
+{
+      "id": "faq_fac_fect_001",
+      "category": "faculty_fect",
+      "keywords": ["fect dean", "engineering dean", "computer science dean", "raman raguraman"],
+      "question": "Who is the Dean of the Faculty of Engineering & Computer Technology (FECT)?",
+      "answer": "Asst. Prof. Mr. Raman Raguraman serves as the Acting Dean & Deputy Dean of the Faculty of Engineering & Computer Technology (FECT). Contact: raman_raguraman@aimst.edu.my | Mobile: +6016-4742587."
+    },
+    {
+      "id": "faq_fac_fect_002",
+      "category": "faculty_fect",
+      "keywords": ["cs coordinator", "computer science coordinator", "ganapreetha"],
+      "question": "Who is the Programme Coordinator for BSc (Hons) Computer Science?",
+      "answer": "Ms. Ganapreetha Renunathan Naidu is the Programme Coordinator for the BSc (Hons) Computer Science program. Contact: ganapreetha@aimst.edu.my | Mobile: +6011-12586435."
+    },
+    {
+      "id": "faq_fac_fect_003",
+      "category": "faculty_fect",
+      "keywords": ["software engineering coordinator", "mritha ramalingam"],
+      "question": "Who is the Programme Coordinator for BSc (Hons) Software Engineering?",
+      "answer": "Assoc. Prof. Dr. Mritha Ramalingam is the Programme Coordinator for the BSc (Hons) Software Engineering program."
+    },
+    {
+      "id": "faq_fac_fect_004",
+      "category": "faculty_fect",
+      "keywords": ["electrical engineering coordinator", "suganandha bharathi"],
+      "question": "Who is the Programme Coordinator for Electrical & Electronic Engineering?",
+      "answer": "Snr. Lecturer Mr. Suganandha Bharathi is the Programme Coordinator for the B.Eng (Hons) in Electrical & Electronic Engineering program."
+    },
+    {
+      "id": "faq_fac_fect_005",
+      "category": "faculty_fect",
+      "keywords": ["head unit fect", "bala selladuri", "electronics lecturer"],
+      "question": "Who is the Head of Unit for Engineering at FECT?",
+      "answer": "Mr. Bala Selladuri serves as Head of Unit and Lecturer in Electrical & Electronics Engineering."
+    },
+    {
+      "id": "faq_fac_fect_006",
+      "category": "faculty_fect",
+      "keywords": ["fect lecturer", "pratap nair marimuthu", "engineering lecturer"],
+      "question": "Who is Dr. Ir. Ts. Pratap Nair Marimuthu?",
+      "answer": "Dr. Ir. Ts. Pratap Nair Marimuthu is a Senior Academic Staff member in the B.Eng Electrical & Electronic Engineering department."
+    },
+    {
+      "id": "faq_fac_fect_007",
+      "category": "faculty_fect",
+      "keywords": ["kamala selvi", "fect assistant professor"],
+      "question": "Who is Asst. Prof. G. Kamala Selvi A/P Gopal?",
+      "answer": "Asst. Prof. G. Kamala Selvi A/P Gopal is an Assistant Professor in the Faculty of Engineering & Computer Technology."
+    },
+    {
+      "id": "faq_fac_fect_008",
+      "category": "faculty_fect",
+      "keywords": ["geetaa bandurengan", "design lecturer", "multimedia lecturer"],
+      "question": "Who is Ms. Geetaa A/P Bandurengan?",
+      "answer": "Ms. Geetaa A/P Bandurengan is a Lecturer at FECT specializing in Multimedia and Graphic Design."
+    },
+    {
+      "id": "faq_fac_fect_009",
+      "category": "faculty_fect",
+      "keywords": ["shamine moganathan", "fect lecturer"],
+      "question": "Who is Ms. Shamine A/P S. Moganathan?",
+      "answer": "Ms. Shamine A/P S. Moganathan is a Lecturer in the Faculty of Engineering & Computer Technology."
+    },
+    {
+      "id": "faq_fac_fect_010",
+      "category": "faculty_fect",
+      "keywords": ["sumathi", "ict lecturer", "fect staff"],
+      "question": "How can I contact Ms. Sumathi from the ICT department?",
+      "answer": "Ms. Sumathi is an ICT Lecturer in the Faculty of Engineering & Computer Technology (FECT). Inquiries can be routed through the FECT main desk or general line +604-429 8000."
+    },
+    {
+      "id": "faq_fac_fas_001",
+      "category": "faculty_fas",
+      "keywords": ["fas dean", "applied sciences dean", "lee su yin"],
+      "question": "Who is the Dean of the Faculty of Applied Sciences (FAS)?",
+      "answer": "Prof. Dr. Lee Su Yin is the Dean of the Faculty of Applied Sciences (FAS)."
+    },
+    {
+      "id": "faq_fac_fas_002",
+      "category": "faculty_fas",
+      "keywords": ["diploma biotech coordinator", "sumitha samuggam"],
+      "question": "Who is the Programme Coordinator for Diploma in Biotechnology?",
+      "answer": "Ts. Dr. Sumitha Samuggam is the Programme Coordinator for the Diploma in Biotechnology program."
+    },
+    {
+      "id": "faq_fac_fas_003",
+      "category": "faculty_fas",
+      "keywords": ["bsc biotech coordinator", "kurunathan sinniah"],
+      "question": "Who is the Programme Coordinator for BSc (Hons) Biotechnology?",
+      "answer": "Asst. Prof. Mr. Kurunathan Sinniah is the Programme Coordinator for the Bachelor of Science (Hons) Biotechnology program."
+    },
+    {
+      "id": "faq_fac_fas_004",
+      "category": "faculty_fas",
+      "keywords": ["central lab manager", "jeevandran sundarasekar"],
+      "question": "Who heads the Central Laboratory Management Unit in FAS?",
+      "answer": "Ts. Dr. Jeevandran Sundarasekar is the Head of the Central Laboratory Management Unit under the Faculty of Applied Sciences."
+    },
+    {
+      "id": "faq_fac_fas_005",
+      "category": "faculty_fas",
+      "keywords": ["postgraduate coordinator fas", "sivachandran parimannan"],
+      "question": "Who is the Postgraduate and R&D Coordinator for FAS?",
+      "answer": "Assoc. Prof. Dr. Sivachandran Parimannan serves as the Postgraduate and R&D Coordinator for the Faculty of Applied Sciences."
+    },
+    {
+      "id": "faq_fac_fas_006",
+      "category": "faculty_fas",
+      "keywords": ["marimuthu", "prof marimuthu", "environmental biotechnology"],
+      "question": "Who is Prof. Dr. K. Marimuthu?",
+      "answer": "Prof. Dr. K. Marimuthu is a Senior Professor in the Faculty of Applied Sciences specializing in Environmental Biotechnology."
+    },
+    {
+      "id": "faq_fac_pharm_001",
+      "category": "faculty_pharmacy",
+      "keywords": ["pharmacy dean", "nahlah elkudssiah ismail"],
+      "question": "Who is the Dean of the Faculty of Pharmacy?",
+      "answer": "Prof. Dr. Nahlah Elkudssiah Ismail is the Dean of the Faculty of Pharmacy."
+    },
+    {
+      "id": "faq_fac_pharm_002",
+      "category": "faculty_pharmacy",
+      "keywords": ["pharmacy deputy dean", "sundram karupiah", "thanapakiam ganeson"],
+      "question": "Who are the Deputy Deans in the Faculty of Pharmacy?",
+      "answer": "Asst. Prof. Ms. Thanapakiam Ganeson serves as Deputy Dean (Academics), and Snr. Assoc. Prof. Dr. Sundram M. Karupiah serves as Deputy Dean (Research, Postgraduates & Administration)."
+    },
+    {
+      "id": "faq_fac_pharm_003",
+      "category": "faculty_pharmacy",
+      "keywords": ["neeraj kumar fuloria", "shivkanya fuloria", "pharmaceutical chemistry"],
+      "question": "Who are Prof. Dr. Neeraj Kumar Fuloria and Dr. Shivkanya Fuloria?",
+      "answer": "Prof. Dr. Neeraj Kumar Fuloria is a Professor of Pharmaceutical Chemistry (Webometric Coordinator), and Snr. Assoc. Prof. Dr. Shivkanya Fuloria is Head of Unit for Pharmaceutical Chemistry (CSR Coordinator)."
+    },
+    {
+      "id": "faq_fac_pharm_004",
+      "category": "faculty_pharmacy",
+      "keywords": ["ravichandran veerasamy", "pharmacy professor"],
+      "question": "Who is Prof. Dr. Ravichandran Veerasamy?",
+      "answer": "Prof. Dr. Ravichandran Veerasamy is a Professor in the Pharmaceutical Chemistry Unit within the Faculty of Pharmacy."
+    },
+    {
+      "id": "faq_fac_pharm_005",
+      "category": "faculty_pharmacy",
+      "keywords": ["industrial pharmacy coordinator", "nina varghese"],
+      "question": "Who coordinates the BSc Industrial Pharmacy and Cosmetics program?",
+      "answer": "Dr. Nina Varghese is the Programme Coordinator for the BSc Industrial Pharmacy and Cosmetics with Honours program."
+    },
+    {
+      "id": "faq_fac_dent_001",
+      "category": "faculty_dentistry",
+      "keywords": ["dentistry dean", "ramesh kumaresan"],
+      "question": "Who is the Dean of the Faculty of Dentistry?",
+      "answer": "Prof. Dr. Ramesh Kumaresan is the Dean of the Faculty of Dentistry at AIMST University."
+    },
+    {
+      "id": "faq_fac_dent_002",
+      "category": "faculty_dentistry",
+      "keywords": ["dentistry deputy dean", "manikandan natarajan", "jegarajan pillay"],
+      "question": "Who are the Deputy Deans in Dentistry?",
+      "answer": "Assoc. Prof. Dr. Manikandan Natarajan serves as Deputy Dean (Student Affairs), and Snr. Assoc. Prof. Dr. Jegarajan Pillay serves as Deputy Dean (Administration)."
+    },
+    {
+      "id": "faq_fac_dent_003",
+      "category": "faculty_dentistry",
+      "keywords": ["dentistry lecturers", "gokulapriyan karuppiah", "kadambari padmanbhan", "manu unnikrishnan"],
+      "question": "Who are some of the key academic lecturers in the Faculty of Dentistry?",
+      "answer": "Key dental academic staff include Dr. Gokulapriyan Karuppiah, Dr. Kadambari Padmanbhan, Asst. Prof. Dr. Manu Unnikrishnan, and Assoc. Prof. Dr. Sivadas Ganapathy."
+    }
+{
+      "id": "faq_fin_001",
+      "category": "finance",
+      "keywords": ["cimb account", "bank account", "payment account", "fee payment", "cimb number"],
+      "question": "What is the official bank account number to pay AIMST University fees?",
+      "answer": "All fee payments must be deposited to: Account Name: AIMST SDN. BHD. REV ACCOUNT | Bank: CIMB Bank Berhad | Account Number: 8006376912. Always include [Student Name + IC/Passport/Student ID] in the transaction reference."
+    },
+    {
+      "id": "faq_fin_002",
+      "category": "finance",
+      "keywords": ["finance contact", "finance email", "bursar email", "receipt upload"],
+      "question": "How do I send my fee payment receipt or contact the Finance Department?",
+      "answer": "You can email your payment receipts and fee inquiries to the Finance & Accounts Department at finance@aimst.edu.my or call the central campus line at +604-429 8000."
+    },
+    {
+      "id": "faq_fin_003",
+      "category": "finance",
+      "keywords": ["application fee", "processing fee", "registration cost"],
+      "question": "How much is the AIMST application processing fee?",
+      "answer": "The application processing fee is RM 100 for Malaysian local applicants and RM 500 (or equivalent in USD) for international applicants."
+    },
+    {
+      "id": "faq_fin_004",
+      "category": "finance",
+      "keywords": ["hostel deposit", "campus fee deposit", "refundable deposit"],
+      "question": "How much is the campus and hostel deposit upon enrollment?",
+      "answer": "Initial registration requires a refundable Campus/Hostel deposit of RM 500, which is refunded upon program completion subject to clearance."
+    },
+    {
+      "id": "faq_fin_005",
+      "category": "finance",
+      "keywords": ["computer science fee", "cs tuition fee", "bsc computer science fee"],
+      "question": "What is the total tuition fee for the Bachelor of Computer Science (Hons)?",
+      "answer": "The total estimated tuition fee for the Bachelor of Computer Science (Hons) program is approximately RM 51,100 to RM 51,200 for local Malaysian students across the 3.5-year duration."
+    },
+    {
+      "id": "faq_fin_006",
+      "category": "finance",
+      "keywords": ["mbbs fee", "medicine fee", "doctor course fee"],
+      "question": "What is the tuition fee for the MBBS (Medicine) program?",
+      "answer": "The total estimated tuition fee for the Bachelor of Medicine and Bachelor of Surgery (MBBS) is approximately RM 319,750 for local students over 5 years."
+    },
+    {
+      "id": "faq_fin_007",
+      "category": "finance",
+      "keywords": ["dental fee", "bds fee", "dentistry fee"],
+      "question": "What is the tuition fee for Bachelor of Dental Surgery (BDS)?",
+      "answer": "The total estimated tuition fee for the Bachelor of Dental Surgery (BDS) program is approximately RM 294,500 over 5 years."
+    },
+    {
+      "id": "faq_fin_008",
+      "category": "finance",
+      "keywords": ["foundation fee", "foundation in science fee", "foundation in business fee"],
+      "question": "How much are the Foundation programs at AIMST?",
+      "answer": "Foundation in Business is approximately RM 10,550 to RM 10,800, while Foundation in Science (Life/Physical) is approximately RM 10,800 to RM 10,900 for the 1-year duration."
+    },
+    {
+      "id": "faq_fin_009",
+      "category": "finance",
+      "keywords": ["hostel fee", "hostel cost", "hostel monthly rate", "room rental"],
+      "question": "How much does hostel accommodation cost per month?",
+      "answer": "Hostel rates per student per month: Quad Sharing (Fan): ~RM 500 - RM 530 | Triple Sharing (Fan): ~RM 580 | Twin Sharing (Air-Con/Fan): ~RM 630 - RM 680 | Single Air-Con Room: ~RM 730 - RM 800+. All standard packages include 3 daily cafeteria meals, basic Wi-Fi, laundry, and 24/7 security."
+    },
+    {
+      "id": "faq_fin_010",
+      "category": "finance",
+      "keywords": ["refund policy", "course withdrawal refund", "deferment fee"],
+      "question": "What is AIMST's tuition fee refund policy upon withdrawal or deferment?",
+      "answer": "For deferments made BEFORE semester commencement, no tuition fees are charged. For withdrawals or deferments AFTER semester commencement, full semester fees apply and refunds are subject to formal clearance from Dean, Library, Finance, and Admissions Offices."
+    }
+{
+      "id": "faq_facil_001",
+      "category": "campus_facilities",
+      "keywords": ["sports complex", "swimming pool", "gym", "badminton", "squash", "sports"],
+      "question": "What sports and fitness facilities are available at AIMST University?",
+      "answer": "The AIMST Sports Complex features an outdoor Olympic-sized swimming pool, an indoor gymnasium, badminton courts, squash courts, basketball courts, table tennis tables, and an aerobics hall for student use."
+    },
+    {
+      "id": "faq_facil_002",
+      "category": "campus_facilities",
+      "keywords": ["temple", "aiya temple", "muniswaran", "hindu temple", "prayer", "pooja"],
+      "question": "Is there a temple on campus at AIMST University?",
+      "answer": "Yes, the AIMST Sri Muniswaran Temple (affectionately known as the 'Aiya Temple') is located along the perimeter of the green campus, right behind the car park opposite the Dental Building. Main weekly Poojas take place every Friday from 12:15 PM to 2:00 PM, managed in collaboration with the Indian Cultural Society."
+    },
+    {
+      "id": "faq_facil_003",
+      "category": "campus_facilities",
+      "keywords": ["surau", "muslim prayer room", "prayer hall", "mosque"],
+      "question": "Are there prayer facilities for Muslim students and staff on campus?",
+      "answer": "Yes, AIMST University provides dedicated Surau (prayer room) facilities on campus with designated areas for male and female Muslim students and staff."
+    },
+    {
+      "id": "faq_facil_004",
+      "category": "campus_facilities",
+      "keywords": ["catering", "cafeteria", "food", "canteen", "meals", "student centre"],
+      "question": "How are daily catering and cafeteria operations structured at AIMST?",
+      "answer": "Daily student and staff catering is managed through contracted internal vendors at the main Student Centre cafeteria. Hostel packages include 3 daily meals. Food options include resident stalls serving South Indian, North Indian, Malay/Halal, Western, Chinese, and vegetarian dishes. The main cafeteria operates daily until 11:30 PM (last orders at 11:15 PM)."
+    },
+    {
+      "id": "faq_rules_001",
+      "category": "hostel_rules",
+      "keywords": ["curfew", "hostel curfew", "night curfew", "12 midnight", "gate lock"],
+      "question": "What are the hostel curfew hours and campus entry regulations?",
+      "answer": "Hostellers must return to campus and be inside their respective hostel rooms by 12:00 Midnight (curfew runs 12:00 AM – 6:00 AM). Non-hostellers must leave the campus grounds by 8:00 PM. Hostel block back/grill gates are locked daily at 9:00 PM and reopen at 5:00 AM, with specific monitored staircases remaining accessible for late night entry."
+    },
+    {
+      "id": "faq_rules_002",
+      "category": "hostel_rules",
+      "keywords": ["leaving campus after 8pm", "main gate log", "night entry logbook"],
+      "question": "What is the security procedure when leaving or entering campus after 8:00 PM?",
+      "answer": "Students leaving or entering the campus main gate after 8:00 PM must present their physical Student ID card and log their personal details and time in the IN/OUT logbook at the main security post."
+    },
+    {
+      "id": "faq_rules_003",
+      "category": "hostel_rules",
+      "keywords": ["cooking in hostel", "kettle", "hostel appliances", "electrical rules"],
+      "question": "Is cooking allowed inside hostel rooms?",
+      "answer": "Cooking inside hostel rooms is strictly prohibited and subject to disciplinary penalties. However, students are permitted to use an electric kettle to boil hot water. Wall socket loading must not exceed 13 Amps."
+    },
+    {
+      "id": "faq_rules_004",
+      "category": "hostel_rules",
+      "keywords": ["dress code", "attire", "formal dress", "jeans", "slippers"],
+      "question": "What is the dress code for students on campus and during classes?",
+      "answer": "During academic hours (8:00 AM – 5:00 PM), students must wear formal attire or tidy casual wear (collared shirts/blouses and slacks/jeans). Faded/tattered jeans, sleeveless tops, shorts, collarless T-shirts, and slippers are strictly forbidden in administrative and lecture areas. Traditional attire is permitted on Fridays."
+    },
+    {
+      "id": "faq_rules_005",
+      "category": "hostel_rules",
+      "keywords": ["corridor shoes", "shoes outside room", "hostel cleaning"],
+      "question": "Are students allowed to leave shoes in the hostel corridors?",
+      "answer": "No. Shoes must not be placed or stored along hostel corridors due to fire and safety guidelines. Shoes left outside in corridors are subject to immediate removal by campus cleaners."
+    },
+    {
+      "id": "faq_rules_006",
+      "category": "hostel_rules",
+      "keywords": ["visitors hostel", "opposite sex visitor", "overnight stay"],
+      "question": "Can visitors or members of the opposite sex visit hostel rooms?",
+      "answer": "Visitors of the opposite sex (including family members) are strictly prohibited from entering hostellers' rooms at any time without explicit written consent from the Chief Warden. Overnight stays by non-registered guests are strictly prohibited."
+    }
+{
+      "id": "faq_emerg_001",
+      "category": "emergency_contacts",
+      "keywords": ["emergency", "security guard", "guardhouse", "campus security", "security number"],
+      "question": "What are the emergency contact numbers for AIMST Campus Security?",
+      "answer": "Main Campus General/Security Line: +604-429 8000 | Laboratory/Biosafety Emergency: +604-429 8043 | General Campus Fax: +604-429 8009."
+    },
+    {
+      "id": "faq_emerg_002",
+      "category": "emergency_contacts",
+      "keywords": ["counselling", "casu", "mental health", "student advisor", "counsellor"],
+      "question": "How can I access Student Counselling and Advisory Services (C.A.S.U)?",
+      "answer": "The Counselling & Advisory Service Unit (C.A.S.U) is located on the 1st Floor of the Student Affairs Building. Contact: Ms. Lakshme (+604-429 8000 Ext: 2215 | letcimei@aimst.edu.my) or Mr. Yahya (+604-429 8000 Ext: 2216 | yahya@aimst.edu.my). Operating hours: Mon-Fri, 8:30 AM - 4:30 PM."
+    },
+    {
+      "id": "faq_emerg_003",
+      "category": "emergency_contacts",
+      "keywords": ["clinic", "student health", "aimst clinic", "doctor", "medical center"],
+      "question": "Where is the AIMST Student Health Clinic located and how do I contact them?",
+      "answer": "The AIMST Student Clinic provides medical consultations on campus for students and staff. For medical emergencies or appointments, contact the clinic via the main university extension or general line at +604-429 8000."
+    },
+    {
+      "id": "faq_emerg_004",
+      "category": "emergency_contacts",
+      "keywords": ["dental institute", "dental clinic", "teeth appointment", "dental center"],
+      "question": "What is the contact number for the AIMST Dental Institute?",
+      "answer": "The AIMST Dental Institute direct desk line is +604-429 8400."
+    },
+    {
+      "id": "faq_emerg_005",
+      "category": "emergency_contacts",
+      "keywords": ["student affairs division", "sad", "student affairs email"],
+      "question": "How do I contact the Student Affairs Division (SAD)?",
+      "answer": "Student Affairs Division Office Line: +604-429 8057 / +604-429 8011 | Email: choose@aimst.edu.my | Located in the Student Affairs Building."
+    },
+    {
+      "id": "faq_fallback_001",
+      "category": "system_fallback",
+      "keywords": ["staff lookup", "directory", "lecturer phone", "tutor search"],
+      "question": "How can I search for a specific lecturer or staff member's direct details?",
+      "answer": "For full staff listings, office room numbers, and direct phone extensions not covered in the instant guide, please search the official AIMST University Directory online at https://aimst.edu.my/staff_/0/"
+    }
+  ]
+}
