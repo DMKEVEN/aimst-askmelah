@@ -36,7 +36,6 @@ exports.handler = async function (event) {
 
   try {
     const bodyData = JSON.parse(event.body || "{}");
-    // Accepts either prompt or query from frontend
     const userPrompt = bodyData.prompt || bodyData.query;
 
     if (!userPrompt) {
@@ -47,8 +46,8 @@ exports.handler = async function (event) {
       };
     }
 
-    // Endpoint with active model identifier
-    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${apiKey}`;
+    // Endpoint using versioned Gemini model identifier
+    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-002:generateContent?key=${apiKey}`;
 
     const response = await fetch(apiUrl, {
       method: "POST",
