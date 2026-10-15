@@ -1,5 +1,5 @@
 exports.handler = async function (event) {
-  // CORS Headers
+  // Common CORS headers for response
   const headers = {
     "Access-Control-Allow-Origin": "*",
     "Access-Control-Allow-Headers": "Content-Type",
@@ -7,7 +7,7 @@ exports.handler = async function (event) {
     "Content-Type": "application/json",
   };
 
-  // Preflight OPTIONS Request
+  // Handle preflight CORS request
   if (event.httpMethod === "OPTIONS") {
     return {
       statusCode: 200,
@@ -16,7 +16,7 @@ exports.handler = async function (event) {
     };
   }
 
-  // Only Allow POST Requests
+  // Only allow POST requests
   if (event.httpMethod !== "POST") {
     return {
       statusCode: 405,
@@ -30,7 +30,9 @@ exports.handler = async function (event) {
     return {
       statusCode: 500,
       headers,
-      body: JSON.stringify({ error: "GEMINI_API_KEY environment variable is missing." }),
+      body: JSON.stringify({
+        error: "GEMINI_API_KEY environment variable is missing on Netlify.",
+      }),
     };
   }
 
@@ -46,44 +48,62 @@ exports.handler = async function (event) {
       };
     }
 
-    // Endpoint using versioned Gemini model identifier
-    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-002:generateContent?key=${apiKey}`;
+    // Standard Gemini model endpoints with fallback logic
+    const modelsToTry = [
+      "gemini-2.0-flash",
+      "gemini-1.5-flash",
+    ];
 
-    const response = await fetch(apiUrl, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        contents: [
-          {
-            parts: [{ text: userPrompt }],
+    let lastError = null;
+    let successfulReply = null;
+
+    for (const model of modelsToTry) {
+      const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
+
+      try {
+        const response = await fetch(apiUrl, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
           },
-        ],
-      }),
-    });
+          body: JSON.stringify({
+            contents: [
+              {
+                parts: [{ text: userPrompt }],
+              },
+            ],
+          }),
+        });
 
-    const data = await response.json();
+        const data = await response.json();
 
-    if (!response.ok) {
-      console.error("Gemini API Error Response:", data);
+        if (response.ok) {
+          successfulReply =
+            data.candidates?.[0]?.content?.parts?.[0]?.text ||
+            "I couldn't generate a response.";
+          break;
+        } else {
+          lastError = data.error?.message || `Model ${model} failed.`;
+          console.warn(`Attempt with ${model} failed:`, lastError);
+        }
+      } catch (err) {
+        lastError = err.message;
+        console.warn(`Network attempt with ${model} failed:`, err.message);
+      }
+    }
+
+    if (successfulReply !== null) {
       return {
-        statusCode: response.status,
+        statusCode: 200,
         headers,
-        body: JSON.stringify({
-          error: data.error?.message || "Failed to call Gemini API",
-        }),
+        body: JSON.stringify({ reply: successfulReply }),
       };
     }
 
-    const reply =
-      data.candidates?.[0]?.content?.parts?.[0]?.text ||
-      "I couldn't generate a response.";
-
     return {
-      statusCode: 200,
+      statusCode: 400,
       headers,
-      body: JSON.stringify({ reply }),
+      body: JSON.stringify({ error: lastError || "All model endpoints failed." }),
     };
   } catch (error) {
     console.error("Function Execution Error:", error);
