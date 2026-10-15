@@ -1,8 +1,26 @@
 exports.handler = async function (event) {
+  // Common CORS headers for response
+  const headers = {
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Headers": "Content-Type",
+    "Access-Control-Allow-Methods": "POST, OPTIONS",
+    "Content-Type": "application/json",
+  };
+
+  // Handle preflight CORS request
+  if (event.httpMethod === "OPTIONS") {
+    return {
+      statusCode: 200,
+      headers,
+      body: JSON.stringify({ message: "CORS preflight successful" }),
+    };
+  }
+
   // Only allow POST requests
   if (event.httpMethod !== "POST") {
     return {
       statusCode: 405,
+      headers,
       body: JSON.stringify({ error: "Method Not Allowed" }),
     };
   }
@@ -11,6 +29,7 @@ exports.handler = async function (event) {
   if (!apiKey) {
     return {
       statusCode: 500,
+      headers,
       body: JSON.stringify({ error: "GEMINI_API_KEY environment variable is missing." }),
     };
   }
@@ -21,6 +40,7 @@ exports.handler = async function (event) {
     if (!prompt) {
       return {
         statusCode: 400,
+        headers,
         body: JSON.stringify({ error: "Prompt is required." }),
       };
     }
@@ -45,9 +65,10 @@ exports.handler = async function (event) {
     const data = await response.json();
 
     if (!response.ok) {
-      console.error("Gemini API Error:", data);
+      console.error("Gemini API Error Response:", data);
       return {
         statusCode: response.status,
+        headers,
         body: JSON.stringify({ error: data.error?.message || "Failed to call Gemini API" }),
       };
     }
@@ -58,15 +79,14 @@ exports.handler = async function (event) {
 
     return {
       statusCode: 200,
-      headers: {
-        "Content-Type": "application/json",
-      },
+      headers,
       body: JSON.stringify({ reply }),
     };
   } catch (error) {
     console.error("Function Execution Error:", error);
     return {
       statusCode: 500,
+      headers,
       body: JSON.stringify({ error: error.message }),
     };
   }
