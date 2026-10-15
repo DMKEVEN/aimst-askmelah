@@ -1,5 +1,5 @@
 exports.handler = async function (event) {
-  // Common CORS headers for response
+  // CORS Headers
   const headers = {
     "Access-Control-Allow-Origin": "*",
     "Access-Control-Allow-Headers": "Content-Type",
@@ -7,7 +7,7 @@ exports.handler = async function (event) {
     "Content-Type": "application/json",
   };
 
-  // Handle preflight CORS request
+  // Preflight OPTIONS Request
   if (event.httpMethod === "OPTIONS") {
     return {
       statusCode: 200,
@@ -16,7 +16,7 @@ exports.handler = async function (event) {
     };
   }
 
-  // Only allow POST requests
+  // Only Allow POST Requests
   if (event.httpMethod !== "POST") {
     return {
       statusCode: 405,
@@ -35,9 +35,11 @@ exports.handler = async function (event) {
   }
 
   try {
-    const { prompt } = JSON.parse(event.body || "{}");
+    const bodyData = JSON.parse(event.body || "{}");
+    // Accepts either prompt or query from frontend
+    const userPrompt = bodyData.prompt || bodyData.query;
 
-    if (!prompt) {
+    if (!userPrompt) {
       return {
         statusCode: 400,
         headers,
@@ -45,22 +47,22 @@ exports.handler = async function (event) {
       };
     }
 
-    const response = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          contents: [
-            {
-              parts: [{ text: prompt }],
-            },
-          ],
-        }),
-      }
-    );
+    // Endpoint with active model identifier
+    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${apiKey}`;
+
+    const response = await fetch(apiUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        contents: [
+          {
+            parts: [{ text: userPrompt }],
+          },
+        ],
+      }),
+    });
 
     const data = await response.json();
 
@@ -69,7 +71,9 @@ exports.handler = async function (event) {
       return {
         statusCode: response.status,
         headers,
-        body: JSON.stringify({ error: data.error?.message || "Failed to call Gemini API" }),
+        body: JSON.stringify({
+          error: data.error?.message || "Failed to call Gemini API",
+        }),
       };
     }
 
