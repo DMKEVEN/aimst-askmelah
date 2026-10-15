@@ -27,41 +27,34 @@ exports.handler = async function (event) {
       return { statusCode: 400, headers, body: JSON.stringify({ error: "Prompt is required." }) };
     }
 
-    // Try primary stable model endpoint
-    const modelsToTry = [
-      "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent",
-      "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent"
-    ];
+    // Google AI Studio Stable REST Endpoint
+    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
 
-    let lastError = null;
+    const response = await fetch(apiUrl, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        contents: [{ parts: [{ text: userPrompt }] }]
+      }),
+    });
 
-    for (const modelUrl of modelsToTry) {
-      const apiUrl = `${modelUrl}?key=${apiKey}`;
-      const response = await fetch(apiUrl, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          contents: [{ parts: [{ text: userPrompt }] }]
-        }),
-      });
+    const data = await response.json();
 
-      const data = await response.json();
-
-      if (response.ok && data.candidates?.[0]?.content?.parts?.[0]?.text) {
-        return {
-          statusCode: 200,
-          headers,
-          body: JSON.stringify({ reply: data.candidates[0].content.parts[0].text }),
-        };
-      }
-
-      lastError = data.error?.message || "Model request failed";
+    if (!response.ok) {
+      console.error("Gemini API Error:", data);
+      return {
+        statusCode: response.status,
+        headers,
+        body: JSON.stringify({ error: data.error?.message || "Failed to call Gemini API" }),
+      };
     }
 
+    const reply = data.candidates?.[0]?.content?.parts?.[0]?.text || "I couldn't generate a response.";
+
     return {
-      statusCode: 503,
+      statusCode: 200,
       headers,
-      body: JSON.stringify({ error: lastError }),
+      body: JSON.stringify({ reply }),
     };
 
   } catch (error) {
