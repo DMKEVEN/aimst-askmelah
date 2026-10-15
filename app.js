@@ -38,12 +38,18 @@ async function handleMessage() {
         const response = await fetch("/.netlify/functions/chat", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ query: text, faqContext: faqData })
+            body: JSON.stringify({ prompt: text, faqContext: faqData })
         });
 
         const data = await response.json();
         removeTypingIndicator(typingId);
-        appendMessage("bot", data.reply);
+
+        if (!response.ok) {
+            appendMessage("bot", data.error || "Failed to generate response. Please try again.");
+            return;
+        }
+
+        appendMessage("bot", data.reply || "I couldn't generate a response.");
     } catch (err) {
         removeTypingIndicator(typingId);
         appendMessage("bot", "Network connection error. Please check your connection.");
@@ -57,7 +63,7 @@ function appendMessage(sender, text) {
     const div = document.createElement("div");
     div.classList.add("message", sender === "user" ? "user-message" : "bot-message");
 
-    let formatted = text
+    let formatted = String(text || "")
         .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
         .replace(/\*(.*?)\*/g, '<em>$1</em>')
         .replace(/\n/g, '<br>')
