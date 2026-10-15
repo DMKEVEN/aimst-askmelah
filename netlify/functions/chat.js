@@ -27,14 +27,15 @@ exports.handler = async function (event) {
       return { statusCode: 400, headers, body: JSON.stringify({ error: "Prompt is required." }) };
     }
 
-    // Google AI Studio Stable REST Endpoint
-    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
+    // Official Google AI Studio Interactions API endpoint
+    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/interactions?key=${apiKey}`;
 
     const response = await fetch(apiUrl, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        contents: [{ parts: [{ text: userPrompt }] }]
+        model: "gemini-3.8-flash",
+        input: userPrompt
       }),
     });
 
@@ -49,7 +50,8 @@ exports.handler = async function (event) {
       };
     }
 
-    const reply = data.candidates?.[0]?.content?.parts?.[0]?.text || "I couldn't generate a response.";
+    // Extract text reply from Interactions API schema
+    const reply = data.outputs?.[0]?.text || data.text || "I couldn't generate a response.";
 
     return {
       statusCode: 200,
